@@ -14,6 +14,10 @@
 		A7E022AA27BA8375009E3B32 /* CryptoCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022A927BA8375009E3B32 /* CryptoCurrencyTests.swift */; };
 		A7E022B427BA8375009E3B32 /* CryptoCurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022B327BA8375009E3B32 /* CryptoCurrencyUITests.swift */; };
 		A7E022B627BA8375009E3B32 /* CryptoCurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022B527BA8375009E3B32 /* CryptoCurrencyUITestsLaunchTests.swift */; };
+		A7E022C427BAC2E6009E3B32 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C327BAC2E6009E3B32 /* NetworkLayer.swift */; };
+		A7E022C627BAC2FD009E3B32 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */; };
+		A7E022C827BAC30A009E3B32 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C727BAC30A009E3B32 /* Error.swift */; };
+		A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C927BAC318009E3B32 /* Executor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		A7E022AF27BA8375009E3B32 /* CryptoCurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E022B327BA8375009E3B32 /* CryptoCurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyUITests.swift; sourceTree = "<group>"; };
 		A7E022B527BA8375009E3B32 /* CryptoCurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7E022C327BAC2E6009E3B32 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		A7E022C727BAC30A009E3B32 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		A7E022C927BAC318009E3B32 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		A7E0229727BA8373009E3B32 /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				A7E022C227BAC2C8009E3B32 /* Network */,
 				A7E0229827BA8373009E3B32 /* CryptoCurrencyApp.swift */,
 				A7E0229A27BA8373009E3B32 /* ContentView.swift */,
 				A7E0229C27BA8375009E3B32 /* Assets.xcassets */,
@@ -125,6 +134,17 @@
 				A7E022B527BA8375009E3B32 /* CryptoCurrencyUITestsLaunchTests.swift */,
 			);
 			path = CryptoCurrencyUITests;
+			sourceTree = "<group>";
+		};
+		A7E022C227BAC2C8009E3B32 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A7E022C327BAC2E6009E3B32 /* NetworkLayer.swift */,
+				A7E022C927BAC318009E3B32 /* Executor.swift */,
+				A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */,
+				A7E022C727BAC30A009E3B32 /* Error.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E022C627BAC2FD009E3B32 /* ServiceProvider.swift in Sources */,
+				A7E022C427BAC2E6009E3B32 /* NetworkLayer.swift in Sources */,
 				A7E0229B27BA8373009E3B32 /* ContentView.swift in Sources */,
+				A7E022C827BAC30A009E3B32 /* Error.swift in Sources */,
+				A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */,
 				A7E0229927BA8373009E3B32 /* CryptoCurrencyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
