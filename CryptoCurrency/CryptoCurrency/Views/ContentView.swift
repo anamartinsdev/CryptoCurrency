@@ -27,20 +27,16 @@ struct ContentView: View {
         NavigationView {
             VStack (alignment: .leading, spacing: 6) {
                 if !shouldHide {
-                    ZStack(alignment: .center, content: {
-                        Button(action: {
+                    HStack(spacing: 90) {
+                        Button("Start", action: {
                             states = viewModel.listCoin
                             shouldHide = true
-                        }) {
-                            Text("Get Started")
-                                .padding()
-                                .foregroundColor(.white)
-                                .background(Color.blue)
-                                .cornerRadius(8)
-                                .opacity(shouldHide ? 0 : 1)
-                        }
-                        .shadow(color: .gray, radius: 4, x: 0.0, y: 0.0)
-                    })
+                        })  .padding().foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                            .opacity(shouldHide ? 0 : 1)
+                            .shadow(color: .gray, radius: 4, x: 0.0, y: 0.0)
+                    }
                 }
                 
                 List {
