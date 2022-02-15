@@ -15,6 +15,7 @@ struct Item: Identifiable{
 
 struct ContentView: View {
     //MARK: - Variables/Constants
+    private var viewModel = CoinViewModel()
     @State private var items: [Item] = []
     @State private var editMode = EditMode.inactive
     private static var count = 0
@@ -31,6 +32,11 @@ struct ContentView: View {
                     .onDelete(perform: onDelete)
                     .onMove(perform: onMove)
                     .onInsert(of: [String(kUTTypeURL)], perform: onInsert)
+                }
+                .onAppear() {
+                    self.viewModel.loadCoins(limit: "10")
+                    self.viewModel.getListAssets(limit: "25")
+                    print(viewModel.listCoin)
                 }
                 .navigationBarTitle(Text("Crypto Currency"), displayMode: .automatic)
                 .navigationBarItems(leading: EditButton(), trailing: addButton)

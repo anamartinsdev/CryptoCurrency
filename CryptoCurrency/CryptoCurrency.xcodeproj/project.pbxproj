@@ -20,6 +20,7 @@
 		A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C927BAC318009E3B32 /* Executor.swift */; };
 		A7F1DBDC27BB0A54003C028E /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDB27BB0A54003C028E /* CoinModel.swift */; };
 		A7F1DBDE27BB420D003C028E /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDD27BB420D003C028E /* CoinService.swift */; };
+		A7F1DBE027BBECB5003C028E /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDF27BBECB5003C028E /* CoinViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		A7E022C927BAC318009E3B32 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 		A7F1DBDB27BB0A54003C028E /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		A7F1DBDD27BB420D003C028E /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
+		A7F1DBDF27BBECB5003C028E /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F1DBDD27BB420D003C028E /* CoinService.swift */,
+				A7F1DBDF27BBECB5003C028E /* CoinViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				A7E022C627BAC2FD009E3B32 /* ServiceProvider.swift in Sources */,
 				A7E022C427BAC2E6009E3B32 /* NetworkLayer.swift in Sources */,
 				A7E0229B27BA8373009E3B32 /* ContentView.swift in Sources */,
+				A7F1DBE027BBECB5003C028E /* CoinViewModel.swift in Sources */,
 				A7E022C827BAC30A009E3B32 /* Error.swift in Sources */,
 				A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */,
 				A7E0229927BA8373009E3B32 /* CryptoCurrencyApp.swift in Sources */,
