@@ -26,6 +26,23 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .leading, spacing: 6) {
+                if !shouldHide {
+                    ZStack(alignment: .center, content: {
+                        Button(action: {
+                            states = viewModel.listCoin
+                            shouldHide = true
+                        }) {
+                            Text("Get Started")
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.blue)
+                                .cornerRadius(8)
+                                .opacity(shouldHide ? 0 : 1)
+                        }
+                        .shadow(color: .gray, radius: 4, x: 0.0, y: 0.0)
+                    })
+                }
+                
                 List {
                     ForEach(states.coins) { coin in
                         HStack{
@@ -46,13 +63,14 @@ struct ContentView: View {
                         }
                         Spacer()
                             VStack(alignment: .trailing){
-                                Text(String(coin.price)).fontWeight(.semibold)
+                                Text(coin.price.asCurrencyWith6Decimals()).fontWeight(.semibold)
                                     .font(.system(size: 14))
                                     .padding(6)
                             }
                             .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
                             Button("", action: {
-                            }).sheet(isPresented: $showingSheet, onDismiss: {insertCoin()
+                            }).sheet(isPresented: $showingSheet, onDismiss: {
+                                insertCoin()
                             }, content: {
                                 SelectAssetView(viewModel: viewModel)
                             })
@@ -70,6 +88,9 @@ struct ContentView: View {
                 .navigationBarItems(leading: EditButton(), trailing: addButton)
                 .colorScheme(colorScheme)
                 .environment(\.editMode, $editMode)
+                .refreshable{
+                    await reloadList()
+                }
             }
         }
     }
@@ -90,11 +111,15 @@ struct ContentView: View {
     }
     
     private func insertCoin() {
-        if !states.coins.contains(viewModel.selectedAssetSymbol){
+        if !states.coins.contains(viewModel.selectedAssetSymbol) {
             states.coins.append(viewModel.selectedAssetSymbol)
         }
     }
-    
+    private func reloadList() async {
+        if states.coins.isEmpty {
+            states = viewModel.listCoin
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

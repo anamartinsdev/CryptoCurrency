@@ -22,6 +22,7 @@
 		A7F1DBDE27BB420D003C028E /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDD27BB420D003C028E /* CoinService.swift */; };
 		A7F1DBE027BBECB5003C028E /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDF27BBECB5003C028E /* CoinViewModel.swift */; };
 		A7F1DBE327BC3C3F003C028E /* SelectAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBE227BC3C3F003C028E /* SelectAssetView.swift */; };
+		A7F1DBE627BC3FFE003C028E /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBE527BC3FFE003C028E /* Double+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		A7F1DBDD27BB420D003C028E /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
 		A7F1DBDF27BBECB5003C028E /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 		A7F1DBE227BC3C3F003C028E /* SelectAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssetView.swift; sourceTree = "<group>"; };
+		A7F1DBE527BC3FFE003C028E /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		A7E0229727BA8373009E3B32 /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				A7F1DBE427BC3FE5003C028E /* Common */,
 				A7F1DBE127BC3C18003C028E /* Views */,
 				A7E022CC27BB09FD009E3B32 /* Model */,
 				A7E022CB27BB09E0009E3B32 /* Services */,
@@ -181,6 +184,14 @@
 				A7F1DBE227BC3C3F003C028E /* SelectAssetView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A7F1DBE427BC3FE5003C028E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A7F1DBE527BC3FFE003C028E /* Double+Ext.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				A7E022C427BAC2E6009E3B32 /* NetworkLayer.swift in Sources */,
 				A7E0229B27BA8373009E3B32 /* ContentView.swift in Sources */,
 				A7F1DBE027BBECB5003C028E /* CoinViewModel.swift in Sources */,
+				A7F1DBE627BC3FFE003C028E /* Double+Ext.swift in Sources */,
 				A7E022C827BAC30A009E3B32 /* Error.swift in Sources */,
 				A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */,
 				A7E0229927BA8373009E3B32 /* CryptoCurrencyApp.swift in Sources */,
