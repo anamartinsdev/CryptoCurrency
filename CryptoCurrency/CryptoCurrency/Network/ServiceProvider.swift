@@ -9,9 +9,6 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct CoinModel: Codable {
-    
-}
 struct ServiceProvider<T: Service> {
     
     private var executor: ServiceExecutor

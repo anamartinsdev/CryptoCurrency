@@ -18,6 +18,8 @@
 		A7E022C627BAC2FD009E3B32 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */; };
 		A7E022C827BAC30A009E3B32 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C727BAC30A009E3B32 /* Error.swift */; };
 		A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E022C927BAC318009E3B32 /* Executor.swift */; };
+		A7F1DBDC27BB0A54003C028E /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDB27BB0A54003C028E /* CoinModel.swift */; };
+		A7F1DBDE27BB420D003C028E /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBDD27BB420D003C028E /* CoinService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		A7E022C727BAC30A009E3B32 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A7E022C927BAC318009E3B32 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
+		A7F1DBDB27BB0A54003C028E /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		A7F1DBDD27BB420D003C028E /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 		A7E0229727BA8373009E3B32 /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				A7E022CC27BB09FD009E3B32 /* Model */,
+				A7E022CB27BB09E0009E3B32 /* Services */,
 				A7E022C227BAC2C8009E3B32 /* Network */,
 				A7E0229827BA8373009E3B32 /* CryptoCurrencyApp.swift */,
 				A7E0229A27BA8373009E3B32 /* ContentView.swift */,
@@ -145,6 +151,22 @@
 				A7E022C527BAC2FD009E3B32 /* ServiceProvider.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A7E022CB27BB09E0009E3B32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7F1DBDD27BB420D003C028E /* CoinService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A7E022CC27BB09FD009E3B32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7F1DBDB27BB0A54003C028E /* CoinModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +305,8 @@
 				A7E022C827BAC30A009E3B32 /* Error.swift in Sources */,
 				A7E022CA27BAC318009E3B32 /* Executor.swift in Sources */,
 				A7E0229927BA8373009E3B32 /* CryptoCurrencyApp.swift in Sources */,
+				A7F1DBDE27BB420D003C028E /* CoinService.swift in Sources */,
+				A7F1DBDC27BB0A54003C028E /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
