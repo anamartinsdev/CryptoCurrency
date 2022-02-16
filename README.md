@@ -16,15 +16,14 @@
 
 ## Utilidades
   ![Postman](https://img.shields.io/badge/-Postman-333333?style=flat&logo=postman)
-Dillinger uses a number of open source projects to work properly:
 
 ## Artigos e créditos
 
-  [SwiftUI Lab](https://swiftui-lab.com/alignment-guides/)
-  [SwiftUI View LifeCycle](https://www.vadimbulavin.com/swiftui-view-lifecycle/)
-  [Syncwith](https://syncwith.com/api/coinstats/get/public-v1-coins)
-  [Coinstats Api Documentation](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3)
-  [SwiftUI List](https://www.vadimbulavin.com/add-edit-move-and-drag-and-drop-in-swiftui-list/)
+ -  [SwiftUI Lab](https://swiftui-lab.com/alignment-guides/)
+ -  [SwiftUI View LifeCycle](https://www.vadimbulavin.com/swiftui-view-lifecycle/)
+ -  [Syncwith](https://syncwith.com/api/coinstats/get/public-v1-coins)
+ -  [Coinstats Api Documentation](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3)
+ -  [SwiftUI List](https://www.vadimbulavin.com/add-edit-move-and-drag-and-drop-in-swiftui-list/)
 
 ## Requisitos
 - Xcode 13
