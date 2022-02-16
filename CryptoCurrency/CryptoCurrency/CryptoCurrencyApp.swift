@@ -11,7 +11,14 @@ import SwiftUI
 struct CryptoCurrencyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack{
+                NavigationView {
+                    ContentView()
+                        .navigationBarHidden(true)
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+            }
+         
         }
     }
 }

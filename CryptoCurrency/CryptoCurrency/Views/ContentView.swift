@@ -8,11 +8,6 @@
 import SwiftUI
 import MobileCoreServices
 
-struct Item: Identifiable{
-    let id = UUID()
-    let title: String
-}
-
 struct ContentView: View {
     //MARK: - Variables/Constants
     private var viewModel = CoinViewModel()
@@ -25,20 +20,24 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack (alignment: .leading, spacing: 6) {
+            VStack (alignment: .center, spacing: 60) {
                 if !shouldHide {
-                    HStack(spacing: 90) {
+                    HStack (alignment: .center, spacing: 90) {
+                        Spacer()
                         Button("Start", action: {
                             states = viewModel.listCoin
                             shouldHide = true
-                        })  .padding().foregroundColor(.white)
+                        })
+                            .frame(width: 200, height: 50)
+                            .foregroundColor(.white)
                             .background(Color.blue)
                             .cornerRadius(8)
                             .opacity(shouldHide ? 0 : 1)
                             .shadow(color: .gray, radius: 4, x: 0.0, y: 0.0)
+                        Spacer()
                     }
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
                 }
-                
                 List {
                     ForEach(states.coins) { coin in
                         HStack{
@@ -56,8 +55,8 @@ struct ContentView: View {
                                         Text(coin.name).fontWeight(.regular).font(.system(size:14))
                                     }.padding(6)
                                 }
-                        }
-                        Spacer()
+                            }
+                            Spacer()
                             VStack(alignment: .trailing){
                                 Text(coin.price.asCurrencyWith6Decimals()).fontWeight(.semibold)
                                     .font(.system(size: 14))
@@ -75,15 +74,16 @@ struct ContentView: View {
                     .onDelete(perform: onDelete)
                     .onMove(perform: onMove)
                 }
+                .colorScheme(colorScheme)
+                .navigationTitle("Crypto Currency")
+                .navigationViewStyle(.automatic)
+                .navigationBarItems(leading: addButton, trailing: EditButton())
+                .environment(\.editMode, $editMode)
+                .listStyle(PlainListStyle())
                 .onAppear() {
                     self.viewModel.loadCoins(limit: "10")
-                    self.viewModel.getListAssets(limit: "25")
-                    print(viewModel.listCoin)
+                    self.viewModel.getListAssets(limit: "30")
                 }
-                .navigationBarTitle(Text("Crypto Currency"), displayMode: .automatic)
-                .navigationBarItems(leading: EditButton(), trailing: addButton)
-                .colorScheme(colorScheme)
-                .environment(\.editMode, $editMode)
                 .refreshable{
                     await reloadList()
                 }
